@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@800&display=swap');
+
+html {
+  --bg: #282c2e;
+  --switcher-bg: #232527;
+  --shadow-color: #000000b0;
+  --color-text: rgba(255, 255, 255, 0.425);
+  --color-text-active: #7489ff;
+  --color-arrow: #88888852;
+
+  font-family: 'Dosis', sans-serif;
+
+}
+
+html[data-theme=light] {
+  --bg: #ffffff;
+  --switcher-bg: rgba(255, 255, 255, 0.664);
+  --shadow-color: #00000044;
+  --color-text: #00000071;
+  --color-text-active: #7489ff;
+  --color-arrow: #656565;
+}
+
+body {
+  transition: background-color 400ms cubic-bezier(0.995, -0.265, 0.855, 0.505);
+  text-align: center;
+  margin: 0px;
+  font-size: 1.5em;
+  color: var(--color-text);
+  font-family: 'Dosis', sans-serif;
+
+  background: var(--bg);
+}
+
+
+
+.switcher {
+  user-select: none;
+  cursor: pointer;
+  padding: 16px;
+  position: fixed;
+  bottom: 1%;
+  left: 1%;
+
+}
+
+.switcher .arrow {
+  margin: 0px 20px;
+  color: var(--color-arrow);
+  transition: all 400ms cubic-bezier(0.995, -0.265, 0.855, 0.505);
+}
+.switcher input[type=checkbox] {
+  height: 0;
+  width: 0;
+  display: none;
+}
+.switcher input[type=checkbox] + div > i {
+  transition: all 400ms cubic-bezier(0.995, -0.265, 0.855, 0.505);
+}
+.switcher input[type=checkbox]:checked + div .arrow {
+  transform: rotate(-180deg);
+}
+.switcher input[type=checkbox]:checked + div > :first-child {
+  color: var(--color-text-active);
+}
+.switcher input[type=checkbox]:not(:checked) + div > :last-child {
+  color: var(--color-text-active);
+}
+
+.search {
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  width: 300px;
+  height: 25px;
+  outline: none;
+  color:var(--color-text);
+  border: none;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  }
+
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: -49%;
+  width: 100%;
+  height: 1000px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+li {
+  list-style: none;
+  padding: 1px;
+  font-family: 'Dosis', sans-serif; 
+  font-size: 0.5em;
+}
+
+
+a {
+  color: var(--color-text);
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: color: var(--color-text);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+}
+ul {
+  bottom: 5%;
+  position: fixed;
+  text-align: right;
+  width: 98%;
+
+}
+
+
+#theModal{
+  background: rgba(255, 255, 255, 0.23);
+  width: 300px;
+  height: 300px;
+  position: center;
+  /* From https://css.glass */
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.4px);
+-webkit-backdrop-filter: blur(4.4px);
+border: none;
+
+}
+/* button without background or border */
+
+
+#showModal {
+ background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-text);
+  /* position top left */
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  /* button size */
+
+
+}
+#hide-news
+{
+  color: var(--color-text);
+}
+
+span {
+  color: var(--color-text);
+}
+
+.modalheader{
+  color: var(--color-text);
+  font-size: 40px;
+  padding-bottom: 1em;
+  
+}
+
+#feed-textarea {
+  max-width: 340px;
+  align-items: right;
+}
+
+.max-input{
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  width: 30px;
+  height: 25px;
+  outline: none;
+  color:var(--color-text);
+  border: none;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+
+
+input[type=checkbox] { 
+  display: none;
+
+}
+
+.newsurl {
+color: var(--color-text);
+background: rgba(0, 0, 0, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 0px solid rgba(0, 0, 0, 0.3);
+outline: none;
+width: 90%;
+}
+input:focus{
+  border: none;
+}
+
+.newsurl-button{
+  color: var(--color-text);
+  background: rgba(0, 0, 0, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 0px solid rgba(0, 0, 0, 0.3);
+outline: none;
+}

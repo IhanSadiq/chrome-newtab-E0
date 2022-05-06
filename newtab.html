@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>E0</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1 id="greeting">E0</h1>
+    <h2 id="clock">E0</h2>
+    <form action="http://www.google.com/search" method="get">
+      <input
+        class="search"
+        id="search"
+        placeholder=" Search on Google"
+        type="text"
+        name="q"
+      />
+    </form>
+    <div class="d">
+      <label class="switcher">
+        <input type="checkbox" name="theme-switcher" />
+        <div>
+          <i class="fas fa-sun"></i>
+          <i id="arrow" class="fas fa-arrow-right arrow"></i>
+          <i class="fas fa-moon"></i>
+        </div>
+      </label>
+    </div>
+    <div id="canvas">
+      <div id="heading">   
+      </div>
+      
+      <div id="feed-textarea">
+          <ul></ul>
+      </div>
+      <!-- create dropdown with 3 options-->
+      <dialog id="theModal">
+        <label class="modalheader"> ⛭ Settings </label>
+        <br>
+        <label class="newsurl-input">
+          <span>news url</span>
+          <br>
+          <input id="newsurl" class="newsurl" type="text" name="newsurl" />
+          <button id="newsurl-button" class="newsurl-button"type="button">saveurl </button>
+        </label>
+        <br>
+        <br>
+        <label class="search-checkbox">
+          <span>📰</span>
+          <input id="search-checkbox" type="checkbox" name="search-checkbox" />
+        </label>
+        <label class="clock-checkbox">
+          <span>⏲️</span>
+          <input id="clock-checkbox" type="checkbox" name="clock-checkbox" />
+        </label>        
+        
+        <label class="date-checkbox">
+          <span>📅</span>
+          <input id="date-checkbox" type="checkbox" name="date-checkbox" />
+        </label>
+        <label class="weather-checkbox">
+          <span>☁️</span>
+          <input id="weather-checkbox" type="checkbox" name="weather-checkbox" />
+        </label>
+        <br>
+        <label class="date-checkbox">
+          <input type="text" class="max-input" id="max-input" placeholder="Max number of news" />
+        </label>
+      </dialog>
+      <button id="showModal">⛭</button>
+        </div>
+      <div id="temperature" class="temperature"></div>
+    </div>
+  </body>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <script src="js/feednami.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="main.js"></script>
+</html>

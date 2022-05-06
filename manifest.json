@@ -1,0 +1,19 @@
+{
+  "name": "E0",
+  "description": "Simplicity is the ultimate sophistication.",
+  "version": "0.1",
+  "incognito": "split",
+  "permissions":["tabs"],
+  "optional_permissions": [],
+  "icons": {
+    "16": "images/new_tab_16.png",
+    "32": "images/new_tab_32.png",
+    "48": "images/new_tab_48.png",
+    "128": "images/new_tab_128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "manifest_version": 3
+}
+
