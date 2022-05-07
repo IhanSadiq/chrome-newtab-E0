@@ -18,4 +18,5 @@ Planned
 - Canvas drag n drop for the elements
 - Daily Qoutes
 
+Works with localstorage to save settings
 
