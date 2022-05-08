@@ -1,6 +1,6 @@
 jQuery(function ($) {
   // DEFINE APPID
-  var APPID = "ENTER_YOUR_OWM_API_KEY";
+  var APPID = "ENTER_YOUR_OWM_API_KEY_HERE";
 
   $(document).ready(function () {
     $temp_cel = "";
