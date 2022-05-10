@@ -343,4 +343,42 @@ document.getElementById("newsurl-button").addEventListener("click", function () 
 }
   , false);
 
+  
 
+// drag element showmodal to another posisiton
+var offset = [0,0];
+var divOverlay = document.getElementById ("search");
+var isDown = false;
+divOverlay.addEventListener('mousedown', function(e) {
+    isDown = true;
+    offset = [
+        divOverlay.offsetLeft - e.clientX,
+        divOverlay.offsetTop - e.clientY
+    ];
+}, true);
+document.addEventListener('mouseup', function() {
+    isDown = false;
+}, true);
+
+document.addEventListener('mousemove', function(e) {
+    event.preventDefault();
+    if (isDown) {
+        divOverlay.style.left = (e.clientX + offset[0]) + 'px';
+        divOverlay.style.top  = (e.clientY + offset[1]) + 'px';
+    }
+}, true);
+
+// save new position of search
+document.getElementById("search").addEventListener("mouseup", function () {
+  localStorage.setItem("search-position", document.getElementById("search").style.top + " " + document.getElementById("search").style.left);
+}
+  , false);
+
+
+
+  // get new position of search
+  var searchPosition = localStorage.getItem("search-position");
+  if (searchPosition != null) {
+    document.getElementById("search").style.top = searchPosition.split(" ")[0];
+    document.getElementById("search").style.left = searchPosition.split(" ")[1];
+  }
